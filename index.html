@@ -17,31 +17,61 @@
         <a class="nav-link" href="configuracion.html">Configuración</a>
         <a class="nav-link" href="teoria.html">Teoría</a>
         <a class="nav-link" href="jugar.html">Jugar</a>
+        <a class="nav-link" href="estadisticas.html">Estadísticas</a>
         <a class="nav-link" href="acerca.html">Acerca de</a>
       </nav>
+      <div class="auth-box">
+        <div class="auth-box__text">
+          <strong data-auth-user>Invitado</strong>
+          <span data-auth-status>Inicia sesion para guardar y consultar estadisticas.</span>
+        </div>
+        <div class="auth-box__actions">
+          <button class="secondary-btn" type="button" data-auth-login>Entrar con Google</button>
+          <button class="secondary-btn secondary-btn--ghost" type="button" data-auth-logout>Salir</button>
+        </div>
+      </div>
     </header>
 
     <main class="main-content">
       <section class="page-panel">
         <h1>Aprender a leer música - Nivel 1</h1>
         <p class="intro-text">
-          Esta pequeña web te ayuda a aprender las notas básicas en el pentagrama.
-          Empieza configurando cómo quieres ver las notas, revisa la teoría y luego
-          juega para practicar.
+          Esta web te ayuda a aprender las notas basicas en el pentagrama, practicar
+          con ejercicios y guardar tu evolucion cuando inicias sesion con Google.
         </p>
+
+        <div class="intro-banner">
+          <div>
+            <p class="intro-banner__eyebrow">Ruta sugerida</p>
+            <h2>Configura, estudia, practica y sigue tu progreso</h2>
+            <p>
+              Puedes usar la app sin registrarte, pero si inicias sesion podras
+              guardar estadisticas y ver tu avance por dia, semana y mes.
+            </p>
+          </div>
+          <a class="primary-btn intro-banner__cta" href="jugar.html">Empezar a practicar</a>
+        </div>
 
         <div class="intro-steps">
           <a class="intro-card intro-card--link" href="configuracion.html">
-            <h2>1. Configurar</h2>
-            <p>Elige si quieres ver las notas con nombres latinos o anglosajones.</p>
+            <h2>1. Configuracion</h2>
+            <p>Elige nomenclatura latina o anglosajona y activa o no los sonidos del juego.</p>
           </a>
           <a class="intro-card intro-card--link" href="teoria.html">
-            <h2>2. Teoría</h2>
-            <p>Observa dónde se ubica cada nota en el pentagrama y memorízala.</p>
+            <h2>2. Teoria</h2>
+            <p>Observa donde se ubica cada nota en el pentagrama y cambia entre niveles.</p>
           </a>
           <a class="intro-card intro-card--link" href="jugar.html">
-            <h2>3. Jugar</h2>
-            <p>Practica identificando notas al azar y sigue tu puntaje.</p>
+            <h2>3. Juego</h2>
+            <p>Practica identificando notas al azar, suma aciertos y guarda tu sesion.</p>
+          </a>
+          <a class="intro-card intro-card--link" href="estadisticas.html">
+            <h2>4. Estadisticas</h2>
+            <p>Consulta el historial de aciertos, errores y la evolucion diaria de tu progreso.</p>
+          </a>
+          <a class="intro-card intro-card--link" href="acerca.html">
+            <h2>5. Proyecto</h2>
+            <p>Revisa de que trata la aplicacion y la informacion general del proyecto.</p>
           </a>
         </div>
       </section>
@@ -51,6 +81,6 @@
       <p>Versión inicial simple para practicar lectura musical - Solo HTML, CSS y JavaScript.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

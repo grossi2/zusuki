@@ -17,8 +17,19 @@
         <a class="nav-link nav-link--active" href="configuracion.html" aria-current="page">Configuración</a>
         <a class="nav-link" href="teoria.html">Teoría</a>
         <a class="nav-link" href="jugar.html">Jugar</a>
+        <a class="nav-link" href="estadisticas.html">Estadísticas</a>
         <a class="nav-link" href="acerca.html">Acerca de</a>
       </nav>
+      <div class="auth-box">
+        <div class="auth-box__text">
+          <strong data-auth-user>Invitado</strong>
+          <span data-auth-status>Inicia sesion para guardar y consultar estadisticas.</span>
+        </div>
+        <div class="auth-box__actions">
+          <button class="secondary-btn" type="button" data-auth-login>Entrar con Google</button>
+          <button class="secondary-btn secondary-btn--ghost" type="button" data-auth-logout>Salir</button>
+        </div>
+      </div>
     </header>
 
     <main class="main-content">
@@ -66,6 +77,6 @@
       <p>Versión inicial simple para practicar lectura musical - Solo HTML, CSS y JavaScript.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

@@ -4,3 +4,4 @@ Thumbs.db
 .env.*
 .firebase/
 node_modules/
+firebase-config.js

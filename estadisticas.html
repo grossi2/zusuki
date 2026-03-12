@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estadisticas - Lectura Musical</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="estadisticas">
+    <header class="main-header">
+      <div class="logo">
+        <span class="logo-icon">♪</span>
+        <span class="logo-text">Lectura Musical - Nivel 1</span>
+      </div>
+      <nav class="main-nav" aria-label="Principal">
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="configuracion.html">Configuracion</a>
+        <a class="nav-link" href="teoria.html">Teoria</a>
+        <a class="nav-link" href="jugar.html">Jugar</a>
+        <a class="nav-link nav-link--active" href="estadisticas.html" aria-current="page">Estadisticas</a>
+        <a class="nav-link" href="acerca.html">Acerca de</a>
+      </nav>
+      <div class="auth-box">
+        <div class="auth-box__text">
+          <strong data-auth-user>Invitado</strong>
+          <span data-auth-status>Inicia sesion para guardar y consultar estadisticas.</span>
+        </div>
+        <div class="auth-box__actions">
+          <button class="secondary-btn" type="button" data-auth-login>Entrar con Google</button>
+          <button class="secondary-btn secondary-btn--ghost" type="button" data-auth-logout>Salir</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="page-panel">
+        <h1>Estadisticas</h1>
+        <p id="stats-status" class="stats-status">
+          Inicia sesion para ver tus estadisticas guardadas.
+        </p>
+
+        <div id="stats-gated" class="stats-gated">
+          <p>Las estadisticas se habilitan cuando Firebase esta configurado y tienes sesion iniciada.</p>
+          <button class="primary-btn" type="button" data-auth-login>Entrar con Google</button>
+        </div>
+
+        <div id="stats-content" hidden>
+          <div class="stats-summary-grid">
+            <article id="stats-card-today" class="stats-card">
+              <p id="stats-card-today-label" class="stats-card__label">Hoy</p>
+              <p>Aciertos: <strong data-stat-correct>0</strong></p>
+              <p>Errores: <strong data-stat-wrong>0</strong></p>
+              <p>Puntaje: <strong data-stat-score>0</strong></p>
+            </article>
+
+            <article id="stats-card-week" class="stats-card">
+              <p id="stats-card-week-label" class="stats-card__label">Ultimos 7 dias</p>
+              <p>Aciertos: <strong data-stat-correct>0</strong></p>
+              <p>Errores: <strong data-stat-wrong>0</strong></p>
+              <p>Puntaje: <strong data-stat-score>0</strong></p>
+            </article>
+
+            <article id="stats-card-month" class="stats-card">
+              <p id="stats-card-month-label" class="stats-card__label">Ultimos 30 dias</p>
+              <p>Aciertos: <strong data-stat-correct>0</strong></p>
+              <p>Errores: <strong data-stat-wrong>0</strong></p>
+              <p>Puntaje: <strong data-stat-score>0</strong></p>
+            </article>
+          </div>
+
+          <section class="stats-chart-panel">
+            <div class="stats-chart-header">
+              <h2>Evolucion diaria</h2>
+              <div class="stats-legend">
+                <span class="stats-legend__item stats-legend__item--correct">Aciertos</span>
+                <span class="stats-legend__item stats-legend__item--wrong">Errores</span>
+              </div>
+            </div>
+            <p id="stats-chart-empty" class="stats-chart-empty" hidden>
+              Todavia no hay datos para graficar.
+            </p>
+            <div id="stats-chart" class="stats-chart"></div>
+          </section>
+
+          <section class="stats-table-panel">
+            <h2>Detalle por dia</h2>
+            <div class="stats-table-wrap">
+              <table class="stats-table">
+                <thead>
+                  <tr>
+                    <th>Fecha</th>
+                    <th>Aciertos</th>
+                    <th>Errores</th>
+                    <th>Puntaje</th>
+                    <th>Sesiones</th>
+                  </tr>
+                </thead>
+                <tbody id="stats-table-body"></tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>Versión inicial simple para practicar lectura musical - Solo HTML, CSS y JavaScript.</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
