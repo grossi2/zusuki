@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jugar - Lectura Musical</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="jugar">
+    <header class="main-header">
+      <div class="logo">
+        <span class="logo-icon">♪</span>
+        <span class="logo-text">Lectura Musical - Nivel 1</span>
+      </div>
+      <nav class="main-nav" aria-label="Principal">
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="configuracion.html">Configuración</a>
+        <a class="nav-link" href="teoria.html">Teoría</a>
+        <a class="nav-link nav-link--active" href="jugar.html" aria-current="page">Jugar</a>
+        <a class="nav-link" href="acerca.html">Acerca de</a>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="page-panel">
+        <h1>Jugar - Adivina la nota</h1>
+        <p>
+          Se mostrará una nota en el pentagrama. Elige la respuesta correcta según la
+          nomenclatura seleccionada.
+        </p>
+
+        <div class="level-switch level-switch--compact">
+          <span class="level-label">Nivel de notas:</span>
+          <button class="level-btn level-btn--active" type="button" data-level-select="1">1</button>
+          <button class="level-btn" type="button" data-level-select="2">2</button>
+        </div>
+
+        <div class="game-layout">
+          <div class="staff-container">
+            <div class="staff staff-game">
+              <div class="staff-lines">
+                <div class="staff-line"></div>
+                <div class="staff-line"></div>
+                <div class="staff-line"></div>
+                <div class="staff-line"></div>
+                <div class="staff-line"></div>
+              </div>
+              <div id="game-note" class="notes-layer"></div>
+            </div>
+          </div>
+
+          <div class="game-options">
+            <p class="game-instruction">¿Qué nota es?</p>
+            <div id="options-container" class="options-container"></div>
+            <p id="feedback" class="feedback"></p>
+            <button id="next-note-btn" class="primary-btn">Siguiente nota</button>
+          </div>
+
+          <div class="score-panel">
+            <h2>Puntaje</h2>
+            <p>Aciertos: <span id="score-correct">0</span></p>
+            <p>Errores: <span id="score-wrong">0</span></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>Versión inicial simple para practicar lectura musical - Solo HTML, CSS y JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

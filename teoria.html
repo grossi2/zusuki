@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teoría - Lectura Musical</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="teoria">
+    <header class="main-header">
+      <div class="logo">
+        <span class="logo-icon">♪</span>
+        <span class="logo-text">Lectura Musical - Nivel 1</span>
+      </div>
+      <nav class="main-nav" aria-label="Principal">
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="configuracion.html">Configuración</a>
+        <a class="nav-link nav-link--active" href="teoria.html" aria-current="page">Teoría</a>
+        <a class="nav-link" href="jugar.html">Jugar</a>
+        <a class="nav-link" href="acerca.html">Acerca de</a>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="page-panel">
+        <h1>Teoría</h1>
+        <p>
+          Aquí puedes ver las siete notas básicas ubicadas en el pentagrama de clave
+          de sol. La etiqueta de cada nota cambia según la nomenclatura elegida en
+          Configuración.
+        </p>
+
+        <div class="level-switch">
+          <button class="level-btn level-btn--active" type="button" data-level-select="1">
+            Nivel 1 · Notas bajas
+          </button>
+          <button class="level-btn" type="button" data-level-select="2">
+            Nivel 2 · Bajas y altas
+          </button>
+        </div>
+
+        <div class="staff-container">
+          <div class="staff staff-theory">
+            <div class="staff-lines">
+              <div class="staff-line"></div>
+              <div class="staff-line"></div>
+              <div class="staff-line"></div>
+              <div class="staff-line"></div>
+              <div class="staff-line"></div>
+            </div>
+            <div id="theory-notes" class="notes-layer"></div>
+          </div>
+        </div>
+
+        <div class="legend">
+          <h2>Notas mostradas</h2>
+          <ul id="theory-note-list" class="note-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>Versión inicial simple para practicar lectura musical - Solo HTML, CSS y JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

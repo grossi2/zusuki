@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configuración - Lectura Musical</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="configuracion">
+    <header class="main-header">
+      <div class="logo">
+        <span class="logo-icon">♪</span>
+        <span class="logo-text">Lectura Musical - Nivel 1</span>
+      </div>
+      <nav class="main-nav" aria-label="Principal">
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link nav-link--active" href="configuracion.html" aria-current="page">Configuración</a>
+        <a class="nav-link" href="teoria.html">Teoría</a>
+        <a class="nav-link" href="jugar.html">Jugar</a>
+        <a class="nav-link" href="acerca.html">Acerca de</a>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="page-panel">
+        <h1>Configuración</h1>
+        <p>Elige la nomenclatura que prefieras para ver y jugar con las notas.</p>
+
+        <div class="config-panel">
+          <label class="config-option">
+            <input type="radio" name="notation" value="latina" id="notation-latina" />
+            <span class="config-label">
+              Nomenclatura latina:
+              <strong>Do, Re, Mi, Fa, Sol, La, Si</strong>
+            </span>
+          </label>
+
+          <label class="config-option">
+            <input type="radio" name="notation" value="anglo" id="notation-anglo" />
+            <span class="config-label">
+              Nomenclatura anglosajona:
+              <strong>C, D, E, F, G, A, B</strong>
+            </span>
+          </label>
+        </div>
+
+        <div class="config-panel">
+          <label class="config-option">
+            <input type="checkbox" id="sound-enabled" />
+            <span class="config-label">
+              Sonido en el juego:
+              <strong>No</strong> por defecto. Si lo activas, escucharas una
+              confirmacion suave al acertar y otra al equivocarte.
+            </span>
+          </label>
+        </div>
+
+        <p class="config-hint">
+          La configuración se guarda en este navegador, así que la próxima vez se
+          recordará tu preferencia.
+        </p>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>Versión inicial simple para practicar lectura musical - Solo HTML, CSS y JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

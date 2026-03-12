@@ -1,0 +1,535 @@
+/* ============================
+   Estilos generales
+   ============================ */
+
+/* Fuente base y colores suaves */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #f5f7fb;
+  color: #1f2933;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #ffffffcc;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e1e4f0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: #1f2933;
+}
+
+.logo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #4f46e5;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.main-nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  background: #e5e7ff;
+  color: #1f2933;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.nav-link:hover {
+  background: #c7ccff;
+}
+
+.nav-link:active {
+  transform: scale(0.97);
+}
+
+.nav-link--active {
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+.main-content {
+  max-width: 1000px;
+  margin: 1.5rem auto 2.5rem;
+  padding: 0 1rem;
+}
+
+.page-panel {
+  display: block;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem 1.3rem 1.8rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  margin-bottom: 1.5rem;
+}
+
+.page-panel h1 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.6rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.intro-text {
+  margin-bottom: 1.2rem;
+}
+
+.intro-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.intro-card {
+  background: #f5f7ff;
+  border-radius: 0.9rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #e1e4ff;
+}
+
+.intro-card--link {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.intro-card--link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(79, 70, 229, 0.12);
+}
+
+.intro-card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.main-footer {
+  text-align: center;
+  padding: 1rem 0.75rem 1.4rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* ============================
+   Configuración
+   ============================ */
+
+.config-panel {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.config-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.8rem;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+.config-option input[type="radio"] {
+  margin-top: 0.15rem;
+}
+
+.config-option input[type="checkbox"] {
+  margin-top: 0.15rem;
+}
+
+.config-label strong {
+  display: block;
+  margin-top: 0.15rem;
+}
+
+.config-hint {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* ============================
+   Pentagrama (Teoría y Juego)
+   ============================ */
+
+.staff-container {
+  margin-top: 1.2rem;
+  padding: 1rem;
+  border-radius: 0.9rem;
+  background: linear-gradient(135deg, #f3f4ff, #f9fafb);
+  border: 1px solid #e1e4ff;
+}
+
+.staff {
+  position: relative;
+  height: 230px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+/* Contenedor de las 5 líneas del pentagrama */
+.staff-lines {
+  position: absolute;
+  left: 12%;
+  right: 5%;
+  top: 20%;
+  bottom: 20%;
+}
+
+.staff-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #cbd5e1;
+}
+
+.staff-line:nth-child(1) {
+  top: 0%;
+}
+
+.staff-line:nth-child(2) {
+  top: 25%;
+}
+
+.staff-line:nth-child(3) {
+  top: 50%;
+}
+
+.staff-line:nth-child(4) {
+  top: 75%;
+}
+
+.staff-line:nth-child(5) {
+  top: 100%;
+}
+
+/* Clave de sol simple usando el símbolo Unicode */
+.staff::after {
+  content: "𝄞";
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-38px);
+  font-size: 70px;
+  color: #4b5563;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* Capa donde se colocan las notas */
+.notes-layer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Nota circular simple */
+.note {
+  position: absolute;
+  width: 30px;
+  height: 22px;
+  border-radius: 50%;
+  background: #111827;
+  border: none;
+  transform: translate(-50%, -50%) skewX(-15deg);
+}
+
+/* Plica (palito) hacia arriba para la teoría */
+.note--stem-up::after {
+  content: "";
+  position: absolute;
+  right: -4px;
+  top: -34px;
+  width: 2px;
+  height: 40px;
+  background: #111827;
+  border-radius: 999px;
+}
+
+/* Pequeña línea adicional para Do grave (línea adicional inferior) */
+.ledger-line {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #111827;
+  transform: translate(-50%, -50%);
+}
+
+.note-label {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0.2rem);
+  font-size: 0.75rem;
+  color: #111827;
+}
+
+.legend {
+  margin-top: 1.4rem;
+}
+
+.note-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+/* ============================
+   Acerca de
+   ============================ */
+
+.about-card {
+  margin-top: 1rem;
+  padding: 1.1rem 1.2rem;
+  border-radius: 0.9rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.about-card h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.about-card ul {
+  padding-left: 1.1rem;
+  margin-top: 0.4rem;
+}
+
+.about-card a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.about-card a:hover {
+  text-decoration: underline;
+}
+
+.about-note {
+  margin-top: 1.1rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* Selector de nivel (teoría y juego) */
+.level-switch {
+  margin-top: 0.8rem;
+  margin-bottom: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.level-switch--compact {
+  margin-top: 0.6rem;
+}
+
+.level-label {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.level-btn {
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  padding: 0.25rem 0.7rem;
+  background: #f9fafb;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.level-btn--active {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #ffffff;
+}
+
+/* ============================
+   Juego
+   ============================ */
+
+.game-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.3fr) minmax(0, 2fr) minmax(0, 1.5fr);
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.game-options {
+  background: #f9fafb;
+  border-radius: 0.9rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+}
+
+.game-instruction {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.options-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.option-btn {
+  width: 100%;
+  border-radius: 999px;
+  border: 1px solid #d4d4ff;
+  padding: 0.5rem 0.75rem;
+  background: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease, border-color 0.15s ease;
+}
+
+.option-btn:hover {
+  background: #eef2ff;
+}
+
+.option-btn:active {
+  transform: scale(0.97);
+}
+
+.option-btn.disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  background: #4f46e5;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.primary-btn:hover {
+  background: #4338ca;
+}
+
+.primary-btn:active {
+  transform: scale(0.97);
+}
+
+.feedback {
+  min-height: 1.4rem;
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.feedback.correct {
+  color: #15803d;
+}
+
+.feedback.wrong {
+  color: #b91c1c;
+}
+
+.score-panel {
+  background: #f5f7ff;
+  border-radius: 0.9rem;
+  padding: 1rem;
+  border: 1px solid #e1e4ff;
+  font-size: 0.95rem;
+}
+
+.score-panel h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+/* ============================
+   Responsivo
+   ============================ */
+
+@media (max-width: 800px) {
+  .game-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .main-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 1.1rem 1rem 1.3rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .staff {
+    height: 150px;
+  }
+
+  .options-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
